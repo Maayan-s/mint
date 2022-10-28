@@ -5,6 +5,7 @@ import 'intersection-observer';
 import Head from 'next/head';
 import Router from 'next/router';
 import { useState, useEffect } from 'react';
+import 'stackflow-demo/stackflow.css';
 
 import { AnalyticsMediatorInterface } from '@/analytics/AbstractAnalyticsImplementation';
 import AnalyticsContext from '@/analytics/AnalyticsContext';
