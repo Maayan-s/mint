@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React from 'react';
 import { useSimpleReveal } from 'simple-reveal';
 import { Stack } from 'stackflow-demo';
@@ -8,32 +9,35 @@ const Demo: React.FC = () => {
     initialTransform: 'scale(0.95)',
   });
   return (
-    <div
-      ref={ref}
-      className={cn()}
-      style={{
-        position: 'relative',
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        margin: '3rem 0',
-        ...style,
-      }}
-    >
+    <div className="not-prose">
       <div
+        ref={ref}
+        className={clsx('not-prose', cn())}
         style={{
-          width: '100%',
-          maxWidth: '360px',
-          height: '640px',
           position: 'relative',
-          borderRadius: '.5rem',
-          overflow: 'hidden',
-          transform: 'translate3d(0, 0, 0)',
-          maskImage: '-webkit-radial-gradient(white, black)',
-          boxShadow: '0 .25rem 1rem 0 rgba(0, 0, 0, .1)',
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          margin: '3rem 0',
+          ...style,
         }}
       >
-        <Stack />
+        <div
+          className="not-prose"
+          style={{
+            width: '100%',
+            maxWidth: '360px',
+            height: '640px',
+            position: 'relative',
+            borderRadius: '.5rem',
+            overflow: 'hidden',
+            transform: 'translate3d(0, 0, 0)',
+            maskImage: '-webkit-radial-gradient(white, black)',
+            boxShadow: '0 .25rem 1rem 0 rgba(0, 0, 0, .1)',
+          }}
+        >
+          <Stack />
+        </div>
       </div>
     </div>
   );
